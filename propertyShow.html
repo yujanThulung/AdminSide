@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>propertyShow</title>
+</head>
+
+<body class="bg-gray-100 p-4 sm:p-8">
+    <div class="max-w-4xl mx-auto bg-white p-4 sm:p-8 rounded shadow-lg">
+        <div>
+            <h1 class="text-2xl sm:text-4xl font-bold mb-2 sm:mb-4">ID <p class="text-gray-600">#23543</p>
+            </h1>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div>
+                <p class="text-gray-600 font-semibold text-lg">Location</p>
+                <p class="text-gray-800">Kalimati, Ktm</p>
+            </div>
+            <div>
+                <p class="text-gray-600 font-semibold text-lg">Category</p>
+                <p class="text-gray-800">Flat</p>
+            </div>
+            <div>
+                <p class="text-gray-600 font-semibold text-lg">Kitchen</p>
+                <p class="text-gray-800">1</p>
+            </div>
+            <div>
+                <p class="text-gray-600 font-semibold text-lg">Bed Room</p>
+                <p class="text-gray-800">3</p>
+            </div>
+            <div>
+                <p class="text-gray-600 font-semibold text-lg">Sitting Room</p>
+                <p class="text-gray-800">1</p>
+            </div>
+            <div>
+                <p class="text-gray-600 font-semibold text-lg">Parking</p>
+                <p class="text-gray-800">1</p>
+            </div>
+            <div>
+                <p class="text-gray-600 font-semibold text-lg">Floor</p>
+                <p class="text-gray-800">First Floor</p>
+            </div>
+            <div>
+                <p class="text-gray-600 font-semibold text-lg">Rent Price</p>
+                <p class="text-gray-800">Rs.5000/- per month</p>
+            </div>
+            <div>
+                <p class="text-gray-600 font-semibold text-lg">Price Negotiable</p>
+                <p class="text-gray-800">Yes</p>
+            </div>
+            <div>
+                <p class="text-gray-600 font-semibold text-lg">Posted On</p>
+                <p class="text-gray-800">2023/08/08</p>
+            </div>
+            <div>
+                <p class="text-gray-600 font-semibold text-lg">Expire On</p>
+                <p class="text-gray-800">2024/05/09</p>
+            </div>
+
+            <div class="col-span-3">
+                <!-- Gallery Section -->
+                <h2 class="text-2xl font-semibold mt-8 mb-4">Gallery</h2>
+                <div class="grid grid-cols-4 gap-4 overflow-x-auto mb-6">
+                    <!-- Add overflow-x-auto for horizontal scrolling -->
+                    <div class="aspect-w-1 aspect-h-1 overflow-hidden rounded-lg cursor-pointer"
+                        onclick="showFullScreen('img/room1.jpg')">
+                        <img src="img/room1.jpg" alt="Image 1" class="object-cover w-full h-full">
+                    </div>
+                    <div class="aspect-w-1 aspect-h-1 overflow-hidden rounded-lg cursor-pointer"
+                        onclick="showFullScreen('img/room2.jpg')">
+                        <img src="img/room2.jpg" alt="Image 2" class="object-cover w-full h-full">
+                    </div>
+                    <div class="aspect-w-1 aspect-h-1 overflow-hidden rounded-lg cursor-pointer"
+                        onclick="showFullScreen('img/room1.jpg')">
+                        <img src="img/room1.jpg" alt="Image 3" class="object-cover w-full h-full">
+                    </div>
+                    <div class="aspect-w-1 aspect-h-1 overflow-hidden rounded-lg cursor-pointer"
+                        onclick="showFullScreen('img/room2.jpg')">
+                        <img src="img/room2.jpg" alt="Image 4" class="object-cover w-full h-full">
+                    </div>
+                    <div class="aspect-w-1 aspect-h-1 overflow-hidden rounded-lg cursor-pointer"
+                        onclick="showFullScreen('img/room2.jpg')">
+                        <img src="img/room2.jpg" alt="Image 4" class="object-cover w-full h-full">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-end">
+            <!-- Back Button -->
+            <button onclick="window.history.back()"
+                class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">Back</button>
+        </div>
+    </div>
+
+    <!-- JavaScript for displaying image in full screen -->
+    <script>
+        function showFullScreen(imageSrc) {
+            // Create a modal container
+            const modalContainer = document.createElement('div');
+            modalContainer.classList.add('fixed', 'inset-0', 'z-50', 'flex', 'items-center', 'justify-center', 'bg-black', 'bg-opacity-80');
+
+            // Create an image element inside modal
+            const modalImage = document.createElement('img');
+            modalImage.src = imageSrc;
+            modalImage.alt = 'Full Screen Image';
+            modalImage.classList.add('max-w-full', 'max-h-full');
+
+            // Append image to modal container
+            modalContainer.appendChild(modalImage);
+
+            // Add click event to close modal when clicked outside the image
+            modalContainer.addEventListener('click', () => {
+                modalContainer.remove();
+            });
+
+            // Append modal container to the body
+            document.body.appendChild(modalContainer);
+        }
+    </script>
+</body>
+
+</html>

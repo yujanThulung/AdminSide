@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Document</title>
+</head>
+
+<body class="bg-slate-100">
+    <!--NAVBAR-->
+    <div
+        class="fixed top-0 left-0 right-0 z-50 bg-slate-900 h-[70px] flex items-center justify-between border-b-2 border-gray-200 px-6">
+        <p class="text-3xl text-bold cursor-pointer text-white" id="menu">&#9776;</p>
+        <!-- logo -->
+        <div class="flex items-center space-x-2">
+            <div class="flex flex-col justify-center text-center text-white">
+                <h2 class="text-3xl font-semibold font-sans">RooMix</h2>
+                <p>Elevate Your Living Experience</p>
+            </div>
+        </div>
+        <!-- component -->
+        <button class="inline-block relative">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+            </svg>
+            <span
+                class="absolute bottom-3 left-3.5 block h-4 w-4 bg-green-500 text-white text-xs rounded-full items-right justify-center">1</span>
+        </button>
+    </div>
+    <!--NAVBAR END -->
+
+    <!-- SIDEBAR AND MAIN CONTENT -->
+    <div class="flex mt-[58px] ">
+        <!-- SIDEBAR -->
+        <aside
+            class=" fixed left-0 z-50 flex flex-col bg-clip-border rounded-xl bg-slate-900 text-white h-[calc(100vh-70px)] w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5"
+            id="sideNav">
+            <div class="flex mt-10 items-center px-4 pb-6">
+                <img class="h-14 w-auto max-w-full align-middle rounded-full" src="/img/yujan.jpg" alt="photo" />
+                <div class="flex ml-3 flex-col">
+                    <h3 class="font-bold text-xl">Yujan Rai</h3>
+                    <p class="text-sm text-gray-500">User</p>
+                </div>
+            </div>
+            <aside class="flex flex-col gap-1 min-w-[240px] p-2 font-sans text-base font-normal text-gray-700">
+                <div role="button" tabindex="0"
+                    class="flex items-center w-full p-3 rounded-lg text-white text-start leading-tight transition-all hover:bg-blue-50 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none">
+
+                    <div class="grid place-items-center mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            aria-hidden="true" class="h-5 w-5">
+                            <path fill-rule="evenodd"
+                                d="M2.25 2.25a.75.75 0 000 1.5H3v10.5a3 3 0 003 3h1.21l-1.172 3.513a.75.75 0 001.424.474l.329-.987h8.418l.33.987a.75.75 0 001.422-.474l-1.17-3.513H18a3 3 0 003-3V3.75h.75a.75.75 0 000-1.5H2.25zm6.04 16.5l.5-1.5h6.42l.5 1.5H8.29zm7.46-12a.75.75 0 00-1.5 0v6a.75.75 0 001.5 0v-6zm-3 2.25a.75.75 0 00-1.5 0v3.75a.75.75 0 001.5 0V9zm-3 2.25a.75.75 0 00-1.5 0v1.5a.75.75 0 001.5 0v-1.5z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </div><a href="index.html">Dashbord </a>
+
+                    <!-- this is for notification  and alerts if any thing goes wrong or something -->
+                    <!-- <div class="grid place-items-center ml-auto justify-self-end">
+                        <div class="relative grid items-center font-sans font-bold uppercase whitespace-nowrap select-none bg-blue-500/20 text-blue-900 py-1 px-2 text-xs rounded-full"
+                            style="opacity: 1;">
+                            <span class="">14</span>
+                        </div>
+                    </div> -->
+                </div>
+
+                <a href="addProperty.html">
+                    <div role="button" tabindex="0"
+                        class="flex items-center w-full p-3 rounded-lg text-white text-start leading-tight transition-all hover:bg-blue-50 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none">
+                        <div class="grid place-items-center mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" fill="currentColor"
+                                aria-hidden="true" class="h-5 w-5">
+                                <path
+                                    d="M543.8 287.6c17 0 32-14 32-32.1c1-9-3-17-11-24L512 185V64c0-17.7-14.3-32-32-32H448c-17.7 0-32 14.3-32 32v36.7L309.5 7c-6-5-14-7-21-7s-15 1-22 8L10 231.5c-7 7-10 15-10 24c0 18 14 32.1 32 32.1h32v69.7c-.1 .9-.1 1.8-.1 2.8V472c0 22.1 17.9 40 40 40h16c1.2 0 2.4-.1 3.6-.2c1.5 .1 3 .2 4.5 .2H160h24c22.1 0 40-17.9 40-40V448 384c0-17.7 14.3-32 32-32h64c17.7 0 32 14.3 32 32v64 24c0 22.1 17.9 40 40 40h24 32.5c1.4 0 2.8 0 4.2-.1c1.1 .1 2.2 .1 3.3 .1h16c22.1 0 40-17.9 40-40V455.8c.3-2.6 .5-5.3 .5-8.1l-.7-160.2h32z" />
+                            </svg>
+                        </div>Add Properties
+                    </div>
+                </a>
+
+                <a href="mProperties.html">
+                    <div role="button" tabindex="0"
+                        class="flex items-center w-full p-3 rounded-lg text-white text-start leading-tight transition-all hover:bg-blue-50 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none">
+                        <div class="grid place-items-center mr-4">
+                            <i class="fa-solid fa-house-flag"></i>
+                        </div>My Properties
+                    </div>
+                </a>
+
+                <a href="soldProperties.html">
+                    <div role="button" tabindex="0"
+                        class="flex items-center w-full p-3 rounded-lg text-white text-start leading-tight transition-all hover:bg-blue-50 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none">
+                        <div class="grid place-items-center mr-4">
+                            <i class="fa-solid fa-house-circle-check"></i>
+                        </div>Sold Properties
+
+                        <!-- this is for notification  and alerts if any thing goes wrong or something -->
+                        <!-- <div class="grid place-items-center ml-auto justify-self-end">
+                        <div class="relative grid items-center font-sans font-bold uppercase whitespace-nowrap select-none bg-blue-500/20 text-blue-900 py-1 px-2 text-xs rounded-full"
+                            style="opacity: 1;">
+                            <span class="">14</span>
+                        </div>
+                    </div> -->
+                    </div>
+                </a>
+
+                <a href="editProfile.html">
+                    <div role="button" tabindex="0"
+                        class="flex items-center w-full p-3 rounded-lg text-white text-start leading-tight transition-all hover:bg-blue-50 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none">
+                        <div class="grid place-items-center mr-4">
+                            <i class="fa-solid fa-user-pen"></i>
+                        </div>EditProfile
+                    </div>
+                </a>
+
+                <a href="notification.html">
+                    <div role="button" tabindex="0"
+                        class="flex items-center w-full p-3 rounded-lg text-white text-start leading-tight transition-all hover:bg-blue-50 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none">
+                        <div class="grid place-items-center mr-4">
+                            <i class="fa-solid fa-bell"></i>
+                        </div>Notification
+                    </div>
+                </a>
+
+                <a href="clientSide\index.html">
+                    <div role="button" tabindex="0"
+                        class="flex items-center w-full p-3 rounded-lg text-white text-start leading-tight transition-all hover:bg-blue-50 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none">
+                        <div class="grid place-items-center mr-4">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                        </div>Log Out
+                    </div>
+                </a>
+            </aside>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="ml-[20rem] flex-grow p-20 bg-slate-100 ">
+            <!----------write a code below this for  responsive design---------->
+            <!--Form-->
+            <div class="max-w-md mx-auto">
+  <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 relative">
+    <div class="flex justify-center mb-6 relative">
+      <img src="img/yujan.jpg" alt="User Avatar" class="rounded-full h-24 w-24 object-cover">
+      <div class="absolute top-0 right-0 -mt-2 mr-36">
+        <button class="bg-gray-200 rounded-full p-1 hover:bg-gray-300">
+          <i class="fas fa-edit text-gray-500"></i>
+        </button>
+      </div>
+    </div>
+    <div class="text-center mb-4">
+      <p class="text-gray-700 text-sm font-bold">Yujan Thulung</p>
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="first-name">
+        First Name
+      </label>
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="first-name" type="text" placeholder="First Name">
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="last-name">
+        Last Name
+      </label>
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="last-name" type="text" placeholder="Last Name">
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">
+        Phone Number
+      </label>
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone" type="tel" placeholder="Phone Number">
+    </div>
+    <div class="mb-6">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+        Email Address
+      </label>
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Email Address">
+    </div>
+    <div class="flex justify-end mt-8">
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+        Update
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+            <!-- Your script tags -->
+            <script src="script.js" defer></script>
+        </main>
+
+    </div>
+    <!-- SIDEBAR AND MAIN CONTENT END -->
+
+    <!-- Additional scripts and links -->
+    <script src="src/script.js"></script>
+</body>
+
+</html>

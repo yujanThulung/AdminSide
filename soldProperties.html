@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>editProperty</title>
+</head>
+
+<body class="bg-slate-100">
+    <!--NAVBAR-->
+    <div
+        class="fixed top-0 left-0 right-0 z-50 bg-slate-900 h-[70px] flex items-center justify-between border-b-2 border-gray-200 px-6">
+        <p class="text-3xl text-bold cursor-pointer text-white" id="menu">&#9776;</p>
+        <!-- logo -->
+        <div class="flex items-center space-x-2">
+            <div class="flex flex-col justify-center text-center text-white">
+                <h2 class="text-3xl font-semibold font-sans">RooMix</h2>
+                <p>Elevate Your Living Experience</p>
+            </div>
+        </div>
+
+        <button class="inline-block relative">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+            </svg>
+            <span
+                class="absolute bottom-3 left-3.5 block h-4 w-4 bg-green-500 text-white text-xs rounded-full items-right justify-center">1</span>
+        </button>
+    </div>
+    <!--NAVBAR END -->
+
+
+    <!-- MAIN CONTENT -->
+    <main class=" flex flex-col justify-center flex-grow px-56 bg-slate-150">
+        <!----------write a code below this for  responsive design---------->
+        <h1 class="text-3xl font-semibold p-0 mt-32">Edit Property</h1>
+        <hr class="border-b border-slate-400 w-full mb-10">
+        <!--From here-->
+        <div class="overflow-x-auto">
+            <div class="flex justify-end">
+                <!-- Back Button -->
+                <button onclick="window.history.back()"
+                    class="bg-red-500 hover:bg-red-600 text-white font-bold mb-6 py-2 px-4 rounded">Back</button>
+            </div>
+            <table class="min-w-full divide-y divide-gray-200 bg-white">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th scope="col"
+                            class="px-4 py-2 text-left text-sm font-bold text-gray-800 uppercase tracking-wider">
+                            S.N.
+                        </th>
+                        <th scope="col"
+                            class="px-4 py-2 text-left text-sm font-bold text-gray-800 uppercase tracking-wider">
+                            ID
+                        </th>
+                        <th scope="col"
+                            class="px-4 py-2 text-left text-sm font-bold text-gray-800 uppercase tracking-wider">
+                            Image
+                        </th>
+                        <th scope="col"
+                            class="px-4 py-2 text-left text-sm font-bold text-gray-800 uppercase tracking-wider">
+                            Type
+                        </th>
+                        <th scope="col"
+                            class="px-4 py-2 text-left text-sm font-bold text-gray-800 uppercase tracking-wider">
+                            Price
+                        </th>
+                        <th scope="col"
+                            class="px-4 py-2 text-left text-sm font-bold text-gray-800 uppercase tracking-wider">
+                            Sold Date <!-- Changed from "Added Date" to "Sold Date" -->
+                        </th>
+                        <th scope="col"
+                            class="px-4 py-2 text-left text-sm font-bold text-gray-800 uppercase tracking-wider">
+                            Featured
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                    <tr class="py-4">
+                        <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-600 font-medium">
+                            1
+                        </td>
+                        <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-600 font-medium">
+                            #1234
+                        </td>
+                        <td class="px-4 py-2 whitespace-nowrap">
+                            <img src="img/room1.jpg" alt="Product Image" class="h-12 w-24 object-cover rounded-md">
+                            <!-- Adjusted width to w-24 -->
+                        </td>
+                        <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-600 font-medium">
+                            Room
+                        </td>
+                        <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-600 font-medium">
+                            $50.00
+                        </td>
+                        <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-600 font-medium">
+                            2024-03-16
+                        </td>
+                        <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-600 font-medium">
+                            Yes
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            
+        </div>
+        
+
+
+    </main>
+    <!-- SIDEBAR AND MAIN CONTENT END -->
+
+    <!-- Additional scripts and links -->
+    <script src="src/script.js"></script>
+    <script src="src/imageAdd.js"></script>
+    <script src="src/alert.js"></script>
+    <script src="src/canecelBtnReturn.js"></script>
+</body>
+
+</html>
